@@ -11,7 +11,8 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write --list-different .",
     "ts-check": "tsc --project tsconfig.json --pretty --noEmit && echo",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18.3.1",
