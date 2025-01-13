@@ -2,7 +2,15 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfairDisplay: ['"Playfair Display"', 'serif'],
+      },
+      screens: {
+        tablet: '1024px',
+        mobile: '450px',
+      },
+    },
   },
   plugins: [],
 };
