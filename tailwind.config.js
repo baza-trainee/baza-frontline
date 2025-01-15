@@ -5,8 +5,12 @@ export default {
     extend: {
       fontFamily: {
         playfairDisplay: ['"Playfair Display"', 'serif'],
-        inter: ['"Inter", "sans-serif'],
         montserrat: ['"Montserrat"', 'sans-serif'],
+        inter: ['"Inter", "sans-serif'],
+      },
+      screens: {
+        tablet: '1024px',
+        mobile: '450px',
       },
     },
   },
