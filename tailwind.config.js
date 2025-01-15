@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         playfairDisplay: ['"Playfair Display"', 'serif'],
+        montserrat: ['"Montserrat"', 'sans-serif'],
+        inter: ['"Inter", "sans-serif'],
       },
       screens: {
         tablet: '1024px',
