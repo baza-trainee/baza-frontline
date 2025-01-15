@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router';
-import Heart from '@/components/icons/Heart';
 import Button from '@/components/ui/Button';
 
 const NotFound = () => {
@@ -7,10 +6,16 @@ const NotFound = () => {
 
   return (
     <div className='flex min-h-screen items-center justify-center bg-slate-50'>
-      <div className='px-4 text-center'>
-        <h1 className='text-gradient text-[200px] font-bold'>404</h1>
-        <h2 className='mt-4 text-4xl font-bold'>Здається, ви потрапили не туди...</h2>
-        <Button text='На головну' icon={<Heart />} onClick={() => navigate('/')} />
+      <div className='px-4 text-center lg:px-6'>
+        <h1 className='text-gradient font-montserrat text-[120px] font-[500] leading-tight sm:text-[150px] md:text-[180px] lg:text-[200px]'>
+          404
+        </h1>
+        <h2 className='mx-auto mt-4 max-w-2xl font-playfairDisplay text-2xl font-bold sm:text-3xl md:text-4xl'>
+          Здається, ви потрапили не туди...
+        </h2>
+        <div className='mt-6 sm:mt-8'>
+          <Button text='На головну' onClick={() => navigate('/')} />
+        </div>
       </div>
     </div>
   );
