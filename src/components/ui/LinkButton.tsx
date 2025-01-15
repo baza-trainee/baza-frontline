@@ -1,22 +1,23 @@
 import React from 'react';
 import Heart from '../icons/Heart';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface LinkButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
-  onClick: () => void;
+  href: string;
 }
 
-const Button = ({ text, onClick, ...props }: ButtonProps) => {
+const LinkButton = ({ text, href, ...props }: LinkButtonProps) => {
   return (
-    <button
-      onClick={onClick}
+    <a
+      href={href}
+      rel='noopener noreferrer'
       className='mx-auto mt-8 flex w-[80vw] items-center justify-center gap-4 rounded-xl bg-black px-8 py-4 text-[18px] font-[500] text-white transition-colors duration-300 hover:bg-gray-800'
       {...props}
     >
       {text}
       <Heart />
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default LinkButton;
