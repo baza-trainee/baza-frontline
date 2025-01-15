@@ -1,9 +1,6 @@
-import { useNavigate } from 'react-router';
-import Button from '@/components/ui/Button';
+import LinkButton from '@/components/ui/LinkButton';
 
 const NotFound = () => {
-  const navigate = useNavigate();
-
   return (
     <div className='flex min-h-screen items-center justify-center bg-slate-50'>
       <div className='px-4 text-center lg:px-6'>
@@ -14,7 +11,7 @@ const NotFound = () => {
           Здається, ви потрапили не туди...
         </h2>
         <div className='mt-6 sm:mt-8'>
-          <Button text='На головну' onClick={() => navigate('/')} />
+          <LinkButton text='На головну' href='/' />
         </div>
       </div>
     </div>
