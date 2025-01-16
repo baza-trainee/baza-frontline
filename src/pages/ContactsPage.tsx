@@ -2,10 +2,7 @@ import ContactsSection from '@/components/contacts/ContactsSection';
 import Map from '@/components/contacts/MapSection';
 import Envelope from '@/components/icons/Envelope';
 import Phone from '@/components/icons/Phone';
-
-const address = ['вул.Петропавлівська 15', 'м.Київ', '04086,Україна'];
-const phones = ['+38 063 628 66 30', '+38 095 662 10 73'];
-const emails = ['info@baza-skill.com.ua', 'cv@baza-skill.com.ua'];
+import { address, phones, emails } from '@/constants';
 
 const ContactsPage = () => {
   return (
