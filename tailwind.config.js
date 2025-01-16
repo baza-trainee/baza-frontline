@@ -12,6 +12,10 @@ export default {
         tablet: '1024px',
         mobile: '450px',
       },
+      backgroundImage: {
+        'custom-footer-gradient':
+          'linear-gradient(180deg, rgba(252, 234, 54, 0.21) 22.9%, rgba(75, 86, 237, 0.28) 100%)',
+      },
     },
   },
   plugins: [],
