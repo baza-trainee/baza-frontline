@@ -12,8 +12,10 @@ const ContactsPage = () => {
     <div className='space-y-[60px] px-[1rem] py-[2rem]'>
       <ContactsSection title='Адреса' data={address} />
       <Map />
-      <ContactsSection title='Телефони' data={phones} icon={<Phone />} />
-      <ContactsSection title='Email пошта' data={emails} icon={<Envelope />} />
+      <div className='space-y-[60px] md:flex md:space-y-0'>
+        <ContactsSection title='Телефони' data={phones} icon={<Phone />} />
+        <ContactsSection title='Email пошта' data={emails} icon={<Envelope />} />
+      </div>
     </div>
   );
 };
