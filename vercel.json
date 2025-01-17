@@ -1,6 +1,10 @@
 {
   "routes": [
     {
+      "src": "/documents/.*\\.pdf",
+      "dest": "/$1"
+    },
+    {
       "src": "/[^.]+",
       "dest": "/",
       "status": 200
