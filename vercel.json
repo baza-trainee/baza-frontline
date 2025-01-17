@@ -1,9 +1,17 @@
 {
-  "routes": [
+  "trailingSlash": false,
+  "rewrites": [
     {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200
+      "source": "/documents/:filename(.+\\.pdf)",
+      "destination": "/documents/:filename"
+    },
+    {
+      "source": "/documents/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/:path((?!.*\\.).*)",
+      "destination": "/"
     }
   ]
 }

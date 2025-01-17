@@ -7,6 +7,7 @@ import SEO from '@/components/common/SEO';
 const PdfView = () => {
   const { fileName } = useParams();
   const src = `/${fileName}`;
+  console.log('Loading PDF from:', src);
 
   PDFJS.GlobalWorkerOptions.workerSrc =
     'https://unpkg.com/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
@@ -24,11 +25,18 @@ const PdfView = () => {
       if (!canvas || !pdf) return;
 
       setIsLoading(true);
-      canvas.height = 0;
-      canvas.width = 0;
+
+      // Cancel any existing render task
+      if (renderTaskRef.current) {
+        renderTaskRef.current.cancel();
+        renderTaskRef.current = null;
+      }
+
       pdf
         .getPage(pageNum)
         .then((page) => {
+          if (!canvasRef.current) return; // Check if component is still mounted
+
           const viewport = page.getViewport({ scale: 1.5 });
           canvas.height = viewport.height;
           canvas.width = viewport.width;
@@ -36,22 +44,24 @@ const PdfView = () => {
             canvasContext: canvas.getContext('2d')!,
             viewport: viewport,
           };
+
           try {
-            if (renderTaskRef.current) {
-              renderTaskRef.current.cancel();
-            }
             renderTaskRef.current = page.render(renderContext);
             return renderTaskRef.current.promise;
           } catch (error) {
-            console.error(error);
+            if (error instanceof Error && error.name === 'RenderingCancelledException') {
+              console.log('Rendering was cancelled, this is normal during navigation');
+              return;
+            }
+            console.error('Rendering error:', error);
             setError('Помилка при відображенні сторінки');
-          } finally {
-            setIsLoading(false);
           }
         })
         .catch((error) => {
-          console.error(error);
+          console.error('Page loading error:', error);
           setError('Помилка при завантаженні сторінки');
+        })
+        .finally(() => {
           setIsLoading(false);
         });
     },
@@ -59,32 +69,40 @@ const PdfView = () => {
   );
 
   useEffect(() => {
-    renderPage(currentPage, pdfDoc);
-  }, [pdfDoc, currentPage, renderPage]);
-
-  useEffect(() => {
+    let mounted = true;
     setIsLoading(true);
     setError(null);
 
     const loadingTask = PDFJS.getDocument(src);
-    loadingTask.promise.then(
-      (loadedDoc) => {
+
+    loadingTask.promise
+      .then((loadedDoc) => {
+        if (!mounted) return;
         setPdfDoc(loadedDoc);
         setIsLoading(false);
-      },
-      (error) => {
-        console.error(error);
+      })
+      .catch((error) => {
+        if (!mounted) return;
+        console.error('PDF loading error:', error);
+        console.error('Attempted to load PDF from:', src);
         setError('Помилка при завантаженні документу');
         setIsLoading(false);
-      },
-    );
+      });
 
     return () => {
+      mounted = false;
       if (renderTaskRef.current) {
         renderTaskRef.current.cancel();
+        renderTaskRef.current = null;
       }
+      // Cancel any ongoing PDF loading
+      loadingTask.destroy();
     };
   }, [src]);
+
+  useEffect(() => {
+    renderPage(currentPage, pdfDoc);
+  }, [pdfDoc, currentPage, renderPage]);
 
   const nextPage = () => pdfDoc && currentPage < pdfDoc.numPages && setCurrentPage(currentPage + 1);
   const prevPage = () => currentPage > 1 && setCurrentPage(currentPage - 1);
