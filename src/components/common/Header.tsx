@@ -15,7 +15,9 @@ const Header = () => {
 
   return (
     <header className='flex w-full items-center justify-between px-4 py-[10px]'>
-      <img src='/header/logo-mobile.png' alt='Baza Frontline лого' />
+      <a href='/'>
+        <img src='/header/logo-mobile.png' alt='Baza Frontline лого' />
+      </a>
       <button
         onClick={() => setShowMobileMenu(!showMobileMenu)}
         className='md:hidden'
