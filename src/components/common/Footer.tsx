@@ -57,12 +57,20 @@ const Footer = () => {
       <FooterSection>
         <ul className='space-y-2' aria-labelledby='Секція-Футера-Документи'>
           <li className='flex items-center gap-[12px] text-[16px]'>
-            <a href='/' aria-label='Політика конфіденційності'>
+            <a
+              href='/documents/Політика конфіденційності.pdf'
+              aria-label='Політика конфіденційності'
+              className='hover:underline'
+            >
               Політика конфіденційності
             </a>
           </li>
           <li className='flex items-center gap-[12px] text-[16px]'>
-            <a href='/' aria-label='Правила користування сайтом'>
+            <a
+              href='/documents/Правила користування сайтом.pdf'
+              aria-label='Правила користування сайтом'
+              className='hover:underline'
+            >
               Правила користування сайтом
             </a>
           </li>
