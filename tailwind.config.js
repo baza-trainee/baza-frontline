@@ -9,8 +9,13 @@ export default {
         inter: ['"Inter", "sans-serif'],
       },
       screens: {
-        tablet: '1024px',
-        mobile: '450px',
+        xs: '320px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+        '3xl': '1536px',
       },
       backgroundImage: {
         'custom-footer-gradient':
