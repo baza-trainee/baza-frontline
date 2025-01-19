@@ -49,6 +49,7 @@ const Hero = () => {
 
   return (
     <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[40px]'>
+      <h1 className='sr-only'>Baza Frontline - Підтримка українських військових</h1>
       <div className={`w-full ${styles.sliderContainer}`}>
         <Slider {...settings}>
           {images.map((image, index) => (
