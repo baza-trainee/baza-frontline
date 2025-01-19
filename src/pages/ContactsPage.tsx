@@ -33,9 +33,11 @@ const ContactsPage = () => {
         nofollow={false}
       />
       <div className='space-y-[60px] px-[1rem] py-[2rem]'>
-        <ContactsSection title='Адреса' data={address} />
-        <Map />
-        <div className='space-y-[60px] md:flex md:space-y-0'>
+        <div className='gap-4 space-y-[60px] md:flex md:items-center md:space-y-0 lg:py-[40px]'>
+          <ContactsSection title='Адреса' data={address} />
+          <Map />
+        </div>
+        <div className='gap-4 space-y-[60px] md:flex md:justify-center md:space-y-0 lg:px-[190px] lg:py-[40px]'>
           <ContactsSection title='Телефони' data={phones} icon={<Phone />} />
           <ContactsSection title='Email пошта' data={emails} icon={<Envelope />} />
         </div>

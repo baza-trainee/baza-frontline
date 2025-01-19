@@ -14,7 +14,7 @@ const NotFound = () => {
         language='uk'
       />
       <div
-        className='flex min-h-screen items-center justify-center bg-slate-50'
+        className='flex min-h-screen items-center justify-center bg-[#E4EDFE]'
         aria-label='Сторінку не знайдено'
       >
         <div className='px-4 text-center lg:px-6'>

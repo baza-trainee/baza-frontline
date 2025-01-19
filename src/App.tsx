@@ -1,7 +1,7 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router';
-import Footer from './components/common/Footer';
 import Header from './components/common/Header';
+import Footer from './components/common/footer/Footer';
 import ContactsPage from './pages/ContactsPage';
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';

@@ -1,51 +1,54 @@
 import { useState } from 'react';
 import { IoChevronUp, IoChevronDown } from 'react-icons/io5';
+import { Link } from 'react-router';
 import { cn } from '@/lib/utils';
 
-const NavMenu = ({ onClose }: { onClose: () => void }) => {
+interface NavMenuProps {
+  onClose?: () => void;
+  className?: string;
+  dropDownClassName?: string;
+}
+
+const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
   const [showSelect, setShowSelect] = useState(false);
   return (
-    <ul className='w-full space-y-2 text-[16px] font-[500]'>
+    <ul className={cn('h-full min-h-[100px] w-full text-[16px] font-[500]', className)}>
       <li>
-        <a href='/' onClick={onClose} aria-label='Перейти до головної сторінки'>
+        <Link to='/' onClick={onClose} aria-label='Перейти до головної сторінки'>
           Головна
-        </a>
+        </Link>
       </li>
-      <li>
-        <span
+      <li className='relative'>
+        <button
+          onClick={() => setShowSelect(!showSelect)}
           className={cn(showSelect ? 'text-blue-500' : 'text-inherit', 'flex items-center gap-2')}
+          aria-expanded={showSelect}
+          aria-controls='target-collection-list'
         >
-          Цільові збори{' '}
-          <button
-            onClick={() => setShowSelect(!showSelect)}
-            className='font-[400]'
-            aria-expanded={showSelect}
-            aria-controls='target-collection-list'
-          >
-            {showSelect ? <IoChevronUp /> : <IoChevronDown />}
-          </button>
-        </span>
+          Цільові збори {showSelect ? <IoChevronUp /> : <IoChevronDown />}
+        </button>
+
         {showSelect && (
-          <div className='mt-2 space-y-2' id='target-collection-list'>
+          <div className={cn('mt-2 space-y-2', dropDownClassName)} id='target-collection-list'>
             <li className='flex items-center gap-2'>
               <img src='/header/100ombr.png' alt='100 ОМБР logo' className='h-[14px] w-[12px]' />
-              <a href='/' onClick={onClose}>
+              <Link to='/' onClick={onClose} className='hover:text-blue-500'>
                 100 ОМБР
-              </a>
+              </Link>
             </li>
             <li className='flex items-center gap-2'>
               <img src='/header/44ombr.png' alt='44 ОМБР logo' className='h-[14px] w-[12px]' />
-              <a href='/' onClick={onClose}>
+              <Link to='/' onClick={onClose} className='hover:text-blue-500'>
                 44 ОМБР
-              </a>
+              </Link>
             </li>
           </div>
         )}
       </li>
       <li>
-        <a href='/contacts' onClick={onClose} aria-label='Перейти до сторінки Контакти'>
+        <Link to='/contacts' onClick={onClose} aria-label='Перейти до сторінки Контакти'>
           Контакти
-        </a>
+        </Link>
       </li>
     </ul>
   );
