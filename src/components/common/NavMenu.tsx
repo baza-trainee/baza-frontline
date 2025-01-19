@@ -33,11 +33,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
         {showSelect && (
           <ul
             id='target-collection-list'
-            className={cn(
-              'absolute left-0 top-[calc(100%+4px)] flex w-max min-w-full flex-col gap-2 rounded-lg bg-white p-4 shadow-lg',
-              'z-[100]',
-              dropDownClassName,
-            )}
+            className={cn('flex w-max min-w-full flex-col gap-2 py-4', dropDownClassName)}
           >
             <li className='flex items-center gap-2'>
               <img src='/header/100ombr.png' alt='100 ОМБР logo' className='h-[14px] w-[12px]' />

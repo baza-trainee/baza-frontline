@@ -13,7 +13,7 @@ const Donate = () => {
           <img src={Img44} alt='44' className='tablet:px-0 tablet:pb-[20px] px-[16px] pb-[24px]' />
           <div className='tablet:mb-[32px] tablet:gap-[16px] mb-[24px] flex flex-col items-start gap-[10px]'>
             <h3 className='tablet:text-[24px] font-playfairDisplay text-[20px] font-bold'>
-              44-та окрема артилерійська бригада (44 ОАБр)
+              44-та окрема артилерійська бригада (44 ОМБр)
             </h3>
             <p className='tablet:[16px] text-[14px]'>
               Допоможемо тим, хто стоїть за нас на передовій!
