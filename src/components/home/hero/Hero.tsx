@@ -5,12 +5,16 @@ import 'slick-carousel/slick/slick.css';
 import LinkButton from '@/components/ui/LinkButton';
 import styles from './Hero.module.css';
 
-const NextArrow = ({ onClick }: CustomArrowProps) => {
+const NextArrow = (props: CustomArrowProps) => {
+  const { onClick } = props;
   return (
     <button
-      className={`${styles.arrow} ${styles.nextArrow}`}
-      onClick={onClick}
       type='button'
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick?.(e);
+      }}
+      className={`${styles.arrow} ${styles.nextArrow}`}
       aria-label='Next slide'
     >
       <img src='/arrow-next.svg' alt='Next' />
@@ -18,12 +22,16 @@ const NextArrow = ({ onClick }: CustomArrowProps) => {
   );
 };
 
-const PrevArrow = ({ onClick }: CustomArrowProps) => {
+const PrevArrow = (props: CustomArrowProps) => {
+  const { onClick } = props;
   return (
     <button
-      className={`${styles.arrow} ${styles.prevArrow}`}
-      onClick={onClick}
       type='button'
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick?.(e);
+      }}
+      className={`${styles.arrow} ${styles.prevArrow}`}
       aria-label='Previous slide'
     >
       <img src='/arrow-prev.svg' alt='Previous' />
@@ -39,10 +47,11 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 3000,
-    arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    swipe: true,
+    swipeToSlide: true,
+    touchThreshold: 30,
   };
 
   const images = Array(3).fill('/hero.png');
@@ -50,7 +59,7 @@ const Hero = () => {
   return (
     <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[40px]'>
       <h1 className='sr-only'>Baza Frontline - Підтримка українських військових</h1>
-      <div className={`w-full ${styles.sliderContainer}`}>
+      <div className={styles.sliderContainer}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>
@@ -58,6 +67,7 @@ const Hero = () => {
                 src={image}
                 alt='Наші Герої'
                 className='h-[180px] w-full rounded-xl object-cover xs2:h-[250px] md:h-[418px] lg:h-[514px] xl:h-[492px]'
+                draggable={false}
               />
             </div>
           ))}

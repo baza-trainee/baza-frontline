@@ -12,9 +12,7 @@ interface NavMenuProps {
 const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
   const [showSelect, setShowSelect] = useState(false);
   return (
-    <ul
-      className={cn('relative z-50 h-full min-h-[100px] w-full text-[16px] font-[500]', className)}
-    >
+    <ul className={cn('relative z-50 w-full text-[16px] font-[500]', className)}>
       <li>
         <Link to='/' onClick={onClose} aria-label='Перейти до головної сторінки'>
           Головна
