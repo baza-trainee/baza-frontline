@@ -32,16 +32,19 @@ const ContactsPage = () => {
         noindex={false}
         nofollow={false}
       />
-      <div className='space-y-[60px] px-[1rem] py-[2rem]'>
-        <div className='gap-4 space-y-[60px] md:flex md:items-center md:space-y-0 lg:py-[40px]'>
-          <ContactsSection title='Адреса' data={address} />
-          <Map />
+      <main className='px-4 py-8 md:px-[40px] lg:px-[80px]'>
+        <h1 className='sr-only'>Контакти Baza Frontline</h1>
+        <div className='space-y-[60px] px-[1rem] py-[2rem]'>
+          <div className='gap-4 space-y-[60px] md:flex md:items-center md:space-y-0 lg:py-[40px]'>
+            <ContactsSection title='Адреса' data={address} />
+            <Map />
+          </div>
+          <div className='gap-4 space-y-[60px] md:flex md:justify-center md:space-y-0 lg:px-[190px] lg:py-[40px]'>
+            <ContactsSection title='Телефони' data={phones} icon={<Phone />} />
+            <ContactsSection title='Email пошта' data={emails} icon={<Envelope />} />
+          </div>
         </div>
-        <div className='gap-4 space-y-[60px] md:flex md:justify-center md:space-y-0 lg:px-[190px] lg:py-[40px]'>
-          <ContactsSection title='Телефони' data={phones} icon={<Phone />} />
-          <ContactsSection title='Email пошта' data={emails} icon={<Envelope />} />
-        </div>
-      </div>
+      </main>
     </>
   );
 };

@@ -15,12 +15,12 @@ const Marquee = () => {
   );
 
   return (
-    <div className='relative w-full overflow-hidden bg-[#F6F6F6] py-3'>
+    <section className='relative w-full overflow-hidden bg-[#F6F6F6] py-3'>
       <div className='hover:pause flex animate-marquee whitespace-nowrap'>
         {content}
         {content}
       </div>
-    </div>
+    </section>
   );
 };
 
