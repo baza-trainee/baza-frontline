@@ -14,25 +14,25 @@ const variants = {
   mobile: {
     wrapper:
       'flex w-full flex-col items-center justify-start space-y-8 bg-custom-footer-gradient p-6 md:hidden',
-    logo: '/logoSM.svg',
+    logo: '/logo/logoSM.svg',
     logoSize: 'h-[50px] w-[50px]',
   },
   tablet: {
     wrapper:
       'hidden w-full flex-col items-center justify-start space-y-8 bg-custom-footer-gradient p-6 md:flex lg:hidden',
-    logo: '/logoMD.svg',
+    logo: '/logo/logoMD.svg',
     logoSize: 'h-[80px] w-[80px]',
   },
   xlTablet: {
     wrapper:
       'hidden w-full flex-col items-center justify-start space-y-8 bg-custom-footer-gradient px-[40px] py-6 lg:flex xl:hidden',
-    logo: '/logoMD.svg',
+    logo: '/logo/logoMD.svg',
     logoSize: 'h-[80px] w-[80px]',
   },
   desktop: {
     wrapper:
       'hidden w-full flex-col items-center justify-start space-y-8 bg-custom-footer-gradient px-[80px] py-6 xl:flex',
-    logo: '/logoXL.svg',
+    logo: '/logo/logoXL.svg',
     logoSize: 'h-[150px] w-[150px]',
   },
 };

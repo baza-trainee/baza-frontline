@@ -17,7 +17,7 @@ const NextArrow = (props: CustomArrowProps) => {
       className={`${styles.arrow} ${styles.nextArrow}`}
       aria-label='Next slide'
     >
-      <img src='/arrow-next.svg' alt='Next' />
+      <img src='/icons/arrow-next.svg' alt='Next' />
     </button>
   );
 };
@@ -34,7 +34,7 @@ const PrevArrow = (props: CustomArrowProps) => {
       className={`${styles.arrow} ${styles.prevArrow}`}
       aria-label='Previous slide'
     >
-      <img src='/arrow-prev.svg' alt='Previous' />
+      <img src='/icons/arrow-prev.svg' alt='Previous' />
     </button>
   );
 };
@@ -54,7 +54,7 @@ const Hero = () => {
     touchThreshold: 30,
   };
 
-  const images = Array(3).fill('/hero.png');
+  const images = Array(3).fill('/hero.webp');
 
   return (
     <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[40px]'>

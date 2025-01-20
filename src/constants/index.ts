@@ -24,18 +24,18 @@ export const needs = [
 export const marquee = [
   {
     text: 'Наближаємо перемогу разом',
-    icon: '/heart.svg',
+    icon: '/icons/heart.svg',
   },
   {
     text: 'Наближаємо перемогу разом',
-    icon: '/hands.svg',
+    icon: '/icons/hands.svg',
   },
   {
     text: 'Наближаємо перемогу разом',
-    icon: '/heart.svg',
+    icon: '/icons/heart.svg',
   },
   {
     text: 'Наближаємо перемогу разом',
-    icon: '/hands.svg',
+    icon: '/icons/hands.svg',
   },
 ];
