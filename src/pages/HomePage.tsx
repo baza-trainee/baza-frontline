@@ -1,10 +1,13 @@
+import { Suspense, lazy } from 'react';
 import SEO from '@/components/common/SEO';
-import Donate from '@/components/home/Donate.tsx';
+import SectionLoader from '@/components/common/SectionLoader';
 import Marquee from '@/components/home/Marquee.tsx';
-import Mission from '@/components/home/Mission.tsx';
 import Hero from '@/components/home/hero/Hero.tsx';
-import Needs from '@/components/home/needs/Needs.tsx';
-import Questions from '@/components/questions/Questions.tsx';
+
+const Needs = lazy(() => import('@/components/home/needs/Needs.tsx'));
+const Donate = lazy(() => import('@/components/home/Donate.tsx'));
+const Mission = lazy(() => import('@/components/home/Mission.tsx'));
+const Questions = lazy(() => import('@/components/questions/Questions.tsx'));
 
 const HomePage = () => {
   const currentDate = new Date().toISOString();
@@ -36,10 +39,18 @@ const HomePage = () => {
       <main>
         <Hero />
         <Marquee />
-        <Needs />
-        <Donate />
-        <Mission />
-        <Questions />
+        <Suspense fallback={<SectionLoader />}>
+          <Needs />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Donate />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Mission />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Questions />
+        </Suspense>
       </main>
     </>
   );

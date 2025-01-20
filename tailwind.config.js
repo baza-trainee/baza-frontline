@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         playfairDisplay: ['"Playfair Display"', 'serif'],
         montserrat: ['"Montserrat"', 'sans-serif'],
-        inter: ['"Inter", "sans-serif'],
+        inter: ['"Inter"', 'sans-serif'],
       },
       screens: {
         xs: '320px',

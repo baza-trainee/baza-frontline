@@ -19,7 +19,7 @@ const Header = () => {
     <header className='h-[80px] border-b border-b-gray-300'>
       <nav className='flex w-full items-center justify-between px-4 py-[10px] lg:px-[40px]'>
         <a href='/' className='lg:w-[200px]'>
-          <img src='/logoSM.svg' alt='Baza Frontline лого' />
+          <img src='/logo/logoSM.svg' alt='Baza Frontline лого' />
         </a>
         <button
           onClick={() => setShowMobileMenu(!showMobileMenu)}

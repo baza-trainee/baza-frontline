@@ -1,8 +1,9 @@
+import Marquee from 'react-fast-marquee';
 import { marquee } from '@/constants';
 
-const Marquee = () => {
+const MarqueeSection = () => {
   const content = (
-    <>
+    <div className='flex'>
       {marquee.map((item, index) => (
         <div key={index} className='flex flex-shrink-0 items-center gap-2 px-5'>
           <div className='flex h-6 w-6 items-center justify-center'>
@@ -11,17 +12,17 @@ const Marquee = () => {
           <p className='text-[16px] font-bold'>{item.text}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 
   return (
     <section className='relative w-full overflow-hidden bg-[#F6F6F6] py-3'>
-      <div className='hover:pause flex animate-marquee whitespace-nowrap'>
+      <Marquee speed={50} pauseOnHover>
         {content}
         {content}
-      </div>
+      </Marquee>
     </section>
   );
 };
 
-export default Marquee;
+export default MarqueeSection;
