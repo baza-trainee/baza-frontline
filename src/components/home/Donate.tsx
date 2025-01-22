@@ -1,58 +1,33 @@
-import Heart from '../icons/Heart';
+import { donateItems } from '@/constants/donate';
+import LinkButton from '../ui/LinkButton';
 
 const Donate = () => {
   return (
-    <section className='mobile:gap-[34px] mobile:px-[24px] mobile:py-[42px] tablet:gap-[40px] tablet:px-[80px] tablet:py-[60px] flex flex-col items-center justify-center gap-[20px] px-[16px] py-[34px]'>
-      <h2 className='mobile:gap-[34px] mobile:text-[32px] tablet:text-[40px] text-center font-playfairDisplay text-[24px] font-bold'>
+    <section className='lg:py-15 flex flex-col items-center justify-center gap-5 bg-[#f4f6fd] px-4 py-8 sm:gap-8 sm:px-6 sm:py-10 md:gap-10 md:px-20'>
+      <h2 className='text-center font-playfairDisplay text-2xl font-bold sm:text-3xl md:text-[40px]'>
         Обери сам, на що направити донат
       </h2>
-      <div className='mobile:flex-row mobile:gap-[24px] tablet:gap-[24px] flex flex-col items-center justify-center gap-[20px]'>
-        <div>
-          <img
-            src='/donate/44-img.png'
-            alt='44'
-            className='tablet:px-0 tablet:pb-[20px] px-[16px] pb-[24px]'
-          />
-          <div className='tablet:mb-[32px] tablet:gap-[16px] mb-[24px] flex flex-col items-start gap-[10px]'>
-            <h3 className='tablet:text-[24px] font-playfairDisplay text-[20px] font-bold'>
-              44-та окрема артилерійська бригада (44 ОМБр)
-            </h3>
-            <p className='tablet:[16px] text-[14px]'>
-              Допоможемо тим, хто стоїть за нас на передовій!
-            </p>
+      <div className='flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6 md:gap-8 lg:gap-10'>
+        {donateItems.map((item) => (
+          <div key={item.id}>
+            <img
+              src={item.image}
+              alt={item.alt}
+              className='object-cover px-4 pb-6 sm:px-0 sm:pb-5 md:h-[328px] md:pb-5 lg:h-[316px]'
+            />
+            <div className='mb-6 flex flex-col items-start gap-2.5 sm:mb-8 md:gap-4 lg:gap-5'>
+              <h3 className='font-playfairDisplay text-xl font-bold sm:text-2xl md:text-[28px] lg:text-[32px]'>
+                {item.title}
+              </h3>
+              <p className='text-sm sm:text-base md:text-lg lg:text-xl'>{item.description}</p>
+            </div>
+            <LinkButton
+              text={item.buttonText}
+              href={item.href}
+              className='sm:w-[288px] sm:py-4 md:w-[275px] md:text-lg lg:w-[300px]'
+            />
           </div>
-
-          <a
-            href=''
-            className='mobile:w-[288px] tablet:w-[275px] tablet:px-[24.5px] tablet:py-[15.5px] tablet:text-[18px] flex w-[100%] flex-row items-center justify-center gap-[12px] rounded-[10px] bg-black px-[43px] py-[11px] text-[16px] text-white transition hover:bg-gray-800'
-          >
-            Підтримати 100 ОМБр
-            <Heart />
-          </a>
-        </div>
-        <div>
-          <img
-            src='/donate/100-img.png'
-            alt='44'
-            className='tablet:px-0 tablet:pb-[20px] px-[16px] pb-[24px]'
-          />
-          <div className='tablet:mb-[32px] tablet:gap-[16px] mb-[24px] flex flex-col items-start gap-[10px]'>
-            <h3 className='tablet:text-[24px] font-playfairDisplay text-[20px] font-bold'>
-              100-та окрема механізована бригада (100 ОМБр)
-            </h3>
-            <p className='tablet:[16px] text-[14px]'>
-              Допоможемо тим, хто стоїть за нас на передовій!
-            </p>
-          </div>
-
-          <a
-            href=''
-            className='mobile:w-[288px] tablet:w-[275px] tablet:px-[24.5px] tablet:py-[15.5px] tablet:text-[18px] flex w-[100%] flex-row items-center justify-center gap-[12px] rounded-[10px] bg-black px-[43px] py-[11px] text-[16px] text-white transition hover:bg-gray-800'
-          >
-            Підтримати 100 ОМБр
-            <Heart />
-          </a>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -28,7 +28,8 @@
     "react-router": "^7.1.1",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.0",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",

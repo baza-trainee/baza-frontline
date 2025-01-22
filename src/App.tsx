@@ -3,6 +3,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router';
 import Header from './components/common/Header';
 import Footer from './components/common/footer/Footer';
+import Brigade44Page from './pages/Brigade44Page';
+import Brigade100Page from './pages/Brigade100Page';
 
 // Lazy load pages
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -25,6 +27,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/contacts' element={<ContactsPage />} />
+          <Route path='/brigade-44' element={<Brigade44Page />} />
+          <Route path='/brigade-100' element={<Brigade100Page />} />
           <Route path='/documents/:fileName' element={<PdfView />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

@@ -7,7 +7,7 @@ import Hero from '@/components/home/hero/Hero.tsx';
 const Needs = lazy(() => import('@/components/home/needs/Needs.tsx'));
 const Donate = lazy(() => import('@/components/home/Donate.tsx'));
 const Mission = lazy(() => import('@/components/home/Mission.tsx'));
-const Questions = lazy(() => import('@/components/questions/Questions.tsx'));
+const Questions = lazy(() => import('@/components/home/Questions'));
 
 const HomePage = () => {
   const currentDate = new Date().toISOString();

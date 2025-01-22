@@ -28,3 +28,11 @@ body.lock {
   touch-action: none;
   overscroll-behavior: none;
 }
+
+.summary-icon {
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+details[open] .summary-icon {
+  transform: rotate(45deg); /* Rotate by 30 degrees when open */
+}
