@@ -1,30 +1,24 @@
-import CarIcon from '../../assets/icons/icons-car.svg';
-import HandIcon from '../../assets/icons/icons-hand.svg';
-import HerbIcon from '../../assets/icons/icons-herb.svg';
+import { missionItems } from '@/constants/mission';
 
 const Mission = () => {
   return (
-    <section className='mobile:gap-[20px] mobile:gap-[34px] mobile:px-[120px] mobile:py-[42px] tablet:gap-[40px] tablet:px-[60px] tablet:py-[80px] flex flex-col px-[34px] py-[16px]'>
-      <h1 className='mobile:mb-0 mobile:text-[32px] tablet:text-[40px] mb-[20px] text-center font-playfairDisplay text-[24px] font-bold'>
+    <section className='flex flex-col bg-[#fcfcfc] px-8 py-4 sm:gap-5 sm:px-[120px] sm:py-[42px] md:gap-10 md:px-[60px] md:py-20 lg:px-[120px]'>
+      <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold sm:mb-0 sm:text-3xl md:text-[40px] lg:text-[40px]'>
         Наша місія
-      </h1>
-      <div className='mobile:flex-row mobile:gap-[31px] tablet:gap-[24px] flex flex-col items-start justify-center gap-[16px]'>
-        <div className='mobile:flex-col flex flex-row gap-[16px]'>
-          <img src={HandIcon} alt='hand' className='mobile:h-[64px] tablet:h-[80px] h-[32px]' />
-          <p className='text-[14px]'>Допомогти воїнам відчути підтримку свого народу.</p>
-        </div>
-        <div className='mobile:flex-col flex flex-row gap-[16px]'>
-          <img src={CarIcon} alt='car' className='mobile:h-[64px] tablet:h-[80px] h-[32px]' />
-          <p className='text-[14px]'>
-            Забезпечити техніку, гуманітарну допомогу та інші критично важливі ресурси.
-          </p>
-        </div>
-        <div className='mobile:flex-col flex flex-row gap-[16px]'>
-          <img src={HerbIcon} alt='herb' className='mobile:h-[64px] tablet:h-[80px] h-[32px]' />
-          <p className='text-[14px]'>Зробити внесок у майбутнє вільної та незалежної України.</p>
-        </div>
+      </h2>
+      <p className='mb-3 hidden w-full text-center text-sm md:block md:text-lg'>
+        Разом ми можемо більше! Ваші донати – це реальна допомога тим, хто стоїть на захисті нашої
+        країни. Кожна гривня – це вклад у спільну перемогу!
+      </p>
+      <div className='flex flex-col items-start justify-center gap-4 sm:gap-8 md:flex-row md:gap-6 lg:gap-8'>
+        {missionItems.map((item) => (
+          <div key={item.id} className='flex flex-row gap-4 md:flex-col md:gap-6 lg:gap-8'>
+            <img src={item.icon} alt={item.alt} className='h-8 sm:h-16 md:h-20 lg:h-24' />
+            <p className='md:text-md text-sm sm:text-base md:text-center'>{item.text}</p>
+          </div>
+        ))}
       </div>
-      <p className='mobile:mt-0 tablet:w-[55%] mt-[12px]'>
+      <p className='mt-3 text-sm sm:mt-0 sm:text-base md:hidden md:w-[55%]'>
         Разом ми можемо більше! Ваші донати – це реальна допомога тим, хто стоїть на захисті нашої
         країни. Кожна гривня – це вклад у спільну перемогу!
       </p>

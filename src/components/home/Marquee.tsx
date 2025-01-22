@@ -5,7 +5,7 @@ const MarqueeSection = () => {
   const content = (
     <div className='flex'>
       {marquee.map((item, index) => (
-        <div key={index} className='flex flex-shrink-0 items-center gap-2 px-5'>
+        <div key={index} className='flex flex-shrink-0 items-center gap-2 bg-[#E4EDFE] px-5'>
           <div className='flex h-6 w-6 items-center justify-center'>
             <img src={item.icon} alt={item.text} className='h-8 w-8 object-contain' />
           </div>
@@ -16,7 +16,7 @@ const MarqueeSection = () => {
   );
 
   return (
-    <section className='relative w-full overflow-hidden bg-[#F6F6F6] py-3'>
+    <section className='relative w-full overflow-hidden bg-[#E4EDFE] py-3'>
       <Marquee speed={50} pauseOnHover>
         {content}
         {content}

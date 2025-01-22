@@ -14,7 +14,8 @@ const LinkButton = ({ text, href, className }: LinkButtonProps) => {
       to={href}
       rel='noopener noreferrer'
       className={cn(
-        'mx-auto flex w-full items-center justify-center gap-4 whitespace-nowrap rounded-xl bg-black px-[16px] py-4 text-[18px] font-[500] text-white transition-colors duration-300 hover:bg-gray-800',
+        className ? className : 'mx-auto',
+        'flex w-full items-center justify-center gap-4 whitespace-nowrap rounded-xl bg-black px-[16px] py-4 text-[18px] font-[500] text-white transition-colors duration-300 hover:bg-gray-800',
         className,
       )}
     >
