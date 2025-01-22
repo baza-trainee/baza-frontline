@@ -73,7 +73,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
             <li className='flex items-center gap-2'>
               <img src='/header/100ombr.png' alt='100 ОМБР logo' className='h-[14px] w-[12px]' />
               <Link
-                to='/100ombr'
+                to='/brigade-100'
                 onClick={onClose}
                 className={cn(pathname === '/100ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
@@ -83,7 +83,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
             <li className='flex items-center gap-2'>
               <img src='/header/44ombr.png' alt='44 ОМБР logo' className='h-[14px] w-[12px]' />
               <Link
-                to='/44ombr'
+                to='/brigade-44'
                 onClick={onClose}
                 className={cn(pathname === '/44ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
