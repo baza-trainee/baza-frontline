@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
 import { cn } from '@/lib/utils';
+import ScrollToTopLink from '../common/ScrollToTopLink';
 import Heart from '../icons/Heart';
 
 interface LinkButtonProps {
@@ -10,7 +10,7 @@ interface LinkButtonProps {
 
 const LinkButton = ({ text, href, className }: LinkButtonProps) => {
   return (
-    <Link
+    <ScrollToTopLink
       to={href}
       rel='noopener noreferrer'
       className={cn(
@@ -21,7 +21,7 @@ const LinkButton = ({ text, href, className }: LinkButtonProps) => {
     >
       {text}
       <Heart />
-    </Link>
+    </ScrollToTopLink>
   );
 };
 

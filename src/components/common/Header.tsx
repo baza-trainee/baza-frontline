@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
 import { useDisableScroll } from '@/hooks/useDisableScroll';
 import Motto from '../ui/Motto';
 import MobileMenu from './MobileMenu';
 import NavMenu from './NavMenu';
+import ScrollToTopLink from './ScrollToTopLink';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <header className='h-[80px] border-b border-b-gray-300'>
       <nav className='flex w-full items-center justify-between px-4 py-[10px] lg:px-[40px]'>
-        <Link to='/' className='lg:w-[200px]'>
+        <ScrollToTopLink to='/' className='lg:w-[200px]'>
           <img src='/logo/logoSM.svg' alt='Baza Frontline лого' />
-        </Link>
+        </ScrollToTopLink>
         <button
           onClick={() => setShowMobileMenu(!showMobileMenu)}
           className='lg:hidden'

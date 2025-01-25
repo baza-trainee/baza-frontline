@@ -16,7 +16,7 @@ const Donate = () => {
               className='object-cover px-4 pb-6 sm:px-0 sm:pb-5 md:h-[328px] md:pb-5 lg:h-[316px]'
             />
             <div className='mb-6 flex flex-col items-start gap-2.5 sm:mb-8 md:gap-4 lg:gap-5'>
-              <h3 className='font-playfairDisplay text-xl font-bold sm:text-2xl md:text-[28px] lg:text-[32px]'>
+              <h3 className='font-playfairDisplay text-xl font-bold sm:text-2xl md:text-[28px] lg:w-[80%] lg:text-[32px]'>
                 {item.title}
               </h3>
               <p className='text-sm sm:text-base md:text-lg lg:text-xl'>{item.description}</p>

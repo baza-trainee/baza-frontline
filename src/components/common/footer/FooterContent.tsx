@@ -1,9 +1,9 @@
-import { Link } from 'react-router';
 import NavMenu from '@/components/common/NavMenu';
 import Envelope from '@/components/icons/Envelope';
 import Phone from '@/components/icons/Phone';
 import { emails, phones } from '@/constants';
 import { cn } from '@/lib/utils';
+import ScrollToTopLink from '../ScrollToTopLink';
 import FooterSection from './FooterSection';
 
 export interface FooterContentProps {
@@ -54,14 +54,14 @@ const FooterContent = ({ variant }: FooterContentProps) => {
           isTablet && 'border-b border-b-gray-400 pb-2',
         )}
       >
-        <Link
+        <ScrollToTopLink
           to={`/documents/${encodeURIComponent('Політика конфіденційності.pdf')}`}
           aria-label='Політика конфіденційності'
           className='hover:underline'
           target='_blank'
         >
           Політика конфіденційності
-        </Link>
+        </ScrollToTopLink>
       </li>
       <li
         className={cn(
@@ -69,14 +69,14 @@ const FooterContent = ({ variant }: FooterContentProps) => {
           isTablet && 'border-b border-b-gray-400 pb-2',
         )}
       >
-        <Link
+        <ScrollToTopLink
           to={`/documents/${encodeURIComponent('Правила користування сайтом.pdf')}`}
           aria-label='Правила користування сайтом'
           className='hover:underline'
           target='_blank'
         >
           Правила користування сайтом
-        </Link>
+        </ScrollToTopLink>
       </li>
     </ul>
   );
