@@ -16,6 +16,7 @@ const AlertModal = ({ isOpen, onClose, title, message }: AlertModalProps) => {
       {/* Modal */}
       <div className='relative z-10 w-full max-w-md rounded-lg bg-white p-6 shadow-xl'>
         {/* Header */}
+        <img src='/logo/logoSM.svg' alt='Baza Frontline лого' className='mb-4' />
         <div className='mb-4'>
           <h3 className='text-xl font-bold text-gray-900'>{title}</h3>
         </div>

@@ -19,14 +19,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-color: #f4f6fd;
-}
-
 body.lock {
   overflow: hidden;
+  height: 100vh;
   touch-action: none;
-  overscroll-behavior: none;
+  -ms-touch-action: none;
+}
+
+body {
+  background-color: #f4f6fd;
 }
 
 .summary-icon {

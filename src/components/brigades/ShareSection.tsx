@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FacebookShareButton, TelegramShareButton, LinkedinShareButton } from 'react-share';
+import { TelegramShareButton, LinkedinShareButton } from 'react-share';
+import { useDisableScroll } from '@/hooks/useDisableScroll';
 import AlertModal from '../common/AlertModal';
 
 interface ShareButtonProps {
@@ -19,9 +20,11 @@ const ShareButton = ({ icon, onClick }: ShareButtonProps) => {
   );
 };
 
-const ShareSection = ({ title, hashtag }: { title: string; hashtag: string }) => {
+const ShareSection = ({ title }: { title: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+
+  useDisableScroll(isModalOpen);
 
   const handleInstagramShare = () => {
     // Check if it's a mobile device
@@ -51,9 +54,9 @@ const ShareSection = ({ title, hashtag }: { title: string; hashtag: string }) =>
     <>
       <section className='flex flex-col items-center justify-center gap-4 px-4 py-[34px] xl:flex-row'>
         <div className='flex flex-col gap-4 md:flex-row'>
-          <FacebookShareButton url={`${shareUrl}\n${title}`} hashtag={hashtag}>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target='_blank'>
             <ShareButton icon='/icons/social/facebook.svg' />
-          </FacebookShareButton>
+          </a>
 
           <div onClick={handleInstagramShare}>
             <ShareButton icon='/icons/social/instagram.svg' />
