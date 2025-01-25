@@ -1,5 +1,6 @@
 import ShareSection from '@/components/brigades/ShareSection';
 import SEO from '@/components/common/SEO';
+import PowerSection from '@/components/brigades/PowerSection';
 
 const Brigade44Page = () => {
   const currentDate = new Date().toISOString();
@@ -28,6 +29,7 @@ const Brigade44Page = () => {
         noindex={false}
       />
       <div className='flex min-h-screen flex-col items-center justify-center'>
+         <PowerSection />
         {/* <DonationForm bankType='monobank' /> */}
         <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
