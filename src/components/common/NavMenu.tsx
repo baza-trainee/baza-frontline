@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { IoChevronUp, IoChevronDown } from 'react-icons/io5';
-import { Link, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import { cn } from '@/lib/utils';
 import { useSelect } from '@/stores/selectStore';
+import ScrollToTopLink from './ScrollToTopLink';
 
 interface NavMenuProps {
   onClose?: () => void;
@@ -38,7 +39,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
   return (
     <ul className={cn('relative z-50 w-full text-[16px] font-[500]', className)}>
       <li>
-        <Link
+        <ScrollToTopLink
           to='/'
           onClick={onClose}
           aria-label='Перейти до головної сторінки'
@@ -48,7 +49,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
           )}
         >
           Головна
-        </Link>
+        </ScrollToTopLink>
       </li>
       <li className='relative' ref={dropdownRef}>
         <button
@@ -72,39 +73,39 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
           >
             <li className='flex items-center gap-2'>
               <img src='/header/100ombr.png' alt='100 ОМБР logo' className='h-[14px] w-[12px]' />
-              <Link
-                to='/brigade-100'
+              <ScrollToTopLink
+                to='/100-ОМБр'
                 onClick={onClose}
                 className={cn(pathname === '/100ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
                 100 ОМБР
-              </Link>
+              </ScrollToTopLink>
             </li>
             <li className='flex items-center gap-2'>
               <img src='/header/44ombr.png' alt='44 ОМБР logo' className='h-[14px] w-[12px]' />
-              <Link
-                to='/brigade-44'
+              <ScrollToTopLink
+                to='/44-ОАБр'
                 onClick={onClose}
                 className={cn(pathname === '/44ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
                 44 ОМБР
-              </Link>
+              </ScrollToTopLink>
             </li>
           </ul>
         )}
       </li>
       <li>
-        <Link
+        <ScrollToTopLink
           to='/contacts'
           onClick={onClose}
           aria-label='Перейти до сторінки Контакти'
           className={cn(
-            'border-b p-2 transition-colors duration-300',
+            'border-b p-[0.6rem] transition-colors duration-300',
             pathname === '/contacts' ? 'border-black' : 'border-transparent hover:border-black',
           )}
         >
           Контакти
-        </Link>
+        </ScrollToTopLink>
       </li>
     </ul>
   );

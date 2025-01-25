@@ -17,7 +17,7 @@ const MarqueeSection = () => {
 
   return (
     <section className='relative w-full overflow-hidden bg-[#E4EDFE] py-3'>
-      <Marquee speed={50} pauseOnHover>
+      <Marquee speed={50}>
         {content}
         {content}
       </Marquee>
