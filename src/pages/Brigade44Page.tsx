@@ -6,7 +6,7 @@ const Brigade44Page = () => {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center'>
       <PowerSection />
-      <InvinciSection/>
+      <InvinciSection />
       <DonationForm />
     </div>
   );

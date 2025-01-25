@@ -1,11 +1,11 @@
 const PowerSection = () => {
   return (
-    <section className='w-full  bg-[#FCFCFC]'>
-      <div className='px-4 py-[60px] max-w-[1280px] m-auto'>
+    <section className='w-full bg-[#FCFCFC]'>
+      <div className='m-auto max-w-[1280px] px-4 py-[60px]'>
         <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-10'>
           Сила на передовій
         </h2>
-        <div className='mb-5 flex flex-wrap xl:flex-nowrap lg:mb-9 xl:mb-12 xl:gap-7'>
+        <div className='mb-5 flex flex-wrap lg:mb-9 xl:mb-12 xl:flex-nowrap xl:gap-7'>
           <div className='2xl:flex-[0_0_52%]'>
             <p className='mb-3'>
               <b>44-та окрема механізована бригада (44 ОМБр)</b> — механізоване з'єднання Сухопутних
