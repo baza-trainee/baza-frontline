@@ -23,6 +23,12 @@ body {
   background-color: #f4f6fd;
 }
 
+.container{
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 body.lock {
   overflow: hidden;
   touch-action: none;
