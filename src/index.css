@@ -28,11 +28,11 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-
 body.lock {
   overflow: hidden;
+  height: 100vh;
   touch-action: none;
-  overscroll-behavior: none;
+  -ms-touch-action: none;
 }
 
 .summary-icon {

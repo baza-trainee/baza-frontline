@@ -46,7 +46,7 @@ const Hero = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     swipe: true,
@@ -54,7 +54,7 @@ const Hero = () => {
     touchThreshold: 30,
   };
 
-  const images = Array(3).fill('/hero.webp');
+  const images = ['/hero/hero1.webp', '/hero/hero2.webp', '/hero/hero3.webp', '/hero/hero4.webp'];
 
   return (
     <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[40px]'>
@@ -74,8 +74,8 @@ const Hero = () => {
         </Slider>
       </div>
       <div className='flex w-full flex-col items-center justify-center gap-2 sm:flex-row sm:gap-6 md:w-fit'>
-        <LinkButton text='Підтримати 100 ОМБР' href='/' className='md:max-w-[288px]' />
-        <LinkButton text='Підтримати 44 ОМБР' href='/' className='md:max-w-[288px]' />
+        <LinkButton text='Підтримати 100 ОМБР' href='/100-ОМБр' className='md:max-w-[288px]' />
+        <LinkButton text='Підтримати 44 ОАБР' href='/44-ОАБр' className='md:max-w-[288px]' />
       </div>
     </section>
   );

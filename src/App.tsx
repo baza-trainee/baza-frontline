@@ -27,8 +27,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/contacts' element={<ContactsPage />} />
-          <Route path='/brigade-44' element={<Brigade44Page />} />
-          <Route path='/brigade-100' element={<Brigade100Page />} />
+          <Route path='/44-ОАБр' element={<Brigade44Page />} />
+          <Route path='/100-ОМБр' element={<Brigade100Page />} />
           <Route path='/documents/:fileName' element={<PdfView />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
