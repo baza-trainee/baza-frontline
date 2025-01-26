@@ -32,9 +32,8 @@ const Brigade44Page = () => {
       />
       <div className='flex min-h-screen flex-col items-center justify-center'>
        <ImageSection />
-      <PowerSection />
-      <InvinciSection />
-      <DonationForm />
+       <PowerSection />
+       <InvinciSection />
        <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
     </>
