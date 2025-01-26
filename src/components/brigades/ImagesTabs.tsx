@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const ImageGrid: React.FC = () => {
   const images = [
-    { src: '../../../public/brigade-44/brigade-img_1.jpg', alt: 'brigade-44-img' },
-    { src: '../../../public/brigade-44/brigade-img_2.jpg', alt: 'brigade-44-img' },
-    { src: '../../../public/brigade-44/brigade-img_3.jpg', alt: 'brigade-44-img' },
-    { src: '../../../public/brigade-44/brigade-img_4.jpg', alt: 'brigade-44-img' },
-    { src: '../../../public/brigade-44/brigade-img_5.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_1.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_2.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_3.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_4.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_5.jpg', alt: 'brigade-44-img' },
   ];
 
   // Встановлюємо початкове зображення як перше з масиву
