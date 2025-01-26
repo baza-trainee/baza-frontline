@@ -1,4 +1,5 @@
 import PowerSection from '@/components/brigades/PowerSection';
+import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
 import SEO from '@/components/common/SEO';
 
@@ -31,6 +32,7 @@ const Brigade44Page = () => {
       <div className='flex min-h-screen flex-col items-center justify-center'>
         <PowerSection />
         {/* <DonationForm bankType='monobank' /> */}
+        <ReportingSection />
         <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
     </>
