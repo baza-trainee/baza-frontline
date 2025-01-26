@@ -1,6 +1,7 @@
 import ImageSection from '@/components/brigades/ImagesTabs';
 import InvinciSection from '@/components/brigades/Invincibility';
 import PowerSection from '@/components/brigades/PowerSection';
+import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
 import SEO from '@/components/common/SEO';
 
@@ -31,9 +32,11 @@ const Brigade44Page = () => {
         noindex={false}
       />
       <div className='flex min-h-screen flex-col items-center justify-center'>
+      
        <ImageSection />
        <PowerSection />
        <InvinciSection />
+       <ReportingSection />
        <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
     </>
