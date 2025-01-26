@@ -1,12 +1,12 @@
 const PowerSection = () => {
   return (
-    <>
-      <section className='px-4 py-[60px]'>
+    <section className='w-full bg-[#FCFCFC]'>
+      <div className='m-auto max-w-[1280px] px-4 py-[60px]'>
         <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-10'>
           Сила на передовій
         </h2>
-        <div className='mb-5 flex flex-wrap lg:mb-9 xl:mb-12 xl:gap-6'>
-          <div className='xl:max-w-[650px]'>
+        <div className='mb-5 flex flex-wrap lg:mb-9 xl:mb-12 xl:flex-nowrap xl:gap-7'>
+          <div className='2xl:flex-[0_0_52%]'>
             <p className='mb-3'>
               <b>44-та окрема механізована бригада (44 ОМБр)</b> — механізоване з'єднання Сухопутних
               військ Збройних сил України, сформовано 1 березня 2023 р.
@@ -20,7 +20,7 @@ const PowerSection = () => {
               танки Leopard 1A5 і польські колісні Rosomak.
             </p>
           </div>
-          <div className='xl:max-w-[670px]'>
+          <div className='2xl:flex-[0_0_55%]'>
             <p className='mb-3'>
               <b>З перших боїв біля Кремінної</b> і до тепер - військове формування надає гідну
               відсіч ворогу. Кожен вихід на позиції - це боротьба за наші життя.
@@ -42,8 +42,8 @@ const PowerSection = () => {
             І твій внесок — це не просто гривня, це шанс врятувати життя і наблизити перемогу.
           </p>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 export default PowerSection;
