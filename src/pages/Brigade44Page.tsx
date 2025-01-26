@@ -1,3 +1,5 @@
+import ImageSection from '@/components/brigades/ImagesTabs';
+import InvinciSection from '@/components/brigades/Invincibility';
 import PowerSection from '@/components/brigades/PowerSection';
 import ShareSection from '@/components/brigades/ShareSection';
 import SEO from '@/components/common/SEO';
@@ -29,9 +31,10 @@ const Brigade44Page = () => {
         noindex={false}
       />
       <div className='flex min-h-screen flex-col items-center justify-center'>
-        <PowerSection />
-        {/* <DonationForm bankType='monobank' /> */}
-        <ShareSection title='Підтримай 44-ту окрему бригаду' />
+       <ImageSection />
+       <PowerSection />
+       <InvinciSection />
+       <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
     </>
   );
