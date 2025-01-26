@@ -32,12 +32,11 @@ const Brigade44Page = () => {
         noindex={false}
       />
       <div className='flex min-h-screen flex-col items-center justify-center'>
-      
-       <ImageSection />
-       <PowerSection />
-       <InvinciSection />
-       <ReportingSection />
-       <ShareSection title='Підтримай 44-ту окрему бригаду' />
+        <ImageSection />
+        <InvinciSection />
+        <PowerSection />
+        <ReportingSection />
+        <ShareSection title='Підтримай 44-ту окрему бригаду' />
       </div>
     </>
   );

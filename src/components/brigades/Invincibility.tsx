@@ -10,7 +10,7 @@ const Invincibility = () => {
           </h2>
           <div className='flex flex-wrap items-center justify-center gap-7 md:flex-nowrap'>
             <div>
-              <img className='h-full rounded-[17px]' src={'/public/brigade-44/Gilsa.webp'} />
+              <img className='h-full rounded-[17px]' src={'/brigade-44/Gilsa.webp'} />
             </div>
             <div className='flex max-w-[640px] flex-col'>
               <h2 className='mb-5 hidden text-center font-playfairDisplay text-[32px] font-bold leading-[150%] md:mb-7 lg:mb-9 lg:block xl:mb-10 xl:text-[40px]'>
