@@ -8,11 +8,11 @@ const images = [
 
 const ReportingSection = () => {
   return (
-    <section className='w-full px-2 py-[24px] md:px-4 md:py-[40px]'>
+    <section className='w-full'>
       <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-10'>
         Звітність
       </h2>
-      <div className='flex justify-center gap-4'>
+      <div className='flex justify-center gap-6'>
         {images.map((image, index) => (
           <img
             key={index}

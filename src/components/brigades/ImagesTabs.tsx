@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BrigadePageTitle from '../common/BrigadePageTitle';
 
 const ImageGrid: React.FC = () => {
   const images = [
@@ -19,7 +20,8 @@ const ImageGrid: React.FC = () => {
   };
 
   return (
-    <div className='flex flex-col items-center'>
+    <section className='flex flex-col items-center px-4 py-[34px] xs:px-4 md:px-10 md:py-10 xl:px-20 xl:py-[20px]'>
+      <BrigadePageTitle title=' 44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
       {/* Expanded Image Container */}
       <div className='relative mt-8 w-full'>
         {/* Expanded Image */}
@@ -41,7 +43,7 @@ const ImageGrid: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

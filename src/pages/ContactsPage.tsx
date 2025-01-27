@@ -32,7 +32,7 @@ const ContactsPage = () => {
         noindex={false}
         nofollow={false}
       />
-      <main className='px-4 py-8 md:px-[40px] lg:px-[80px]'>
+      <main className='flex flex-col'>
         <h1 className='sr-only'>Контакти Baza Frontline</h1>
         <div className='space-y-[60px] px-[1rem] py-[2rem]'>
           <div className='gap-4 space-y-[60px] md:flex md:items-center md:space-y-0 lg:py-[40px]'>
