@@ -18,6 +18,21 @@ export default {
         '2xl': '1440px',
         '3xl': '1536px',
       },
+      container: {
+        padding: {
+          DEFAULT: '16px',
+          xs: '16px',
+          md: '40px',
+          xl: '80px',
+        },
+      },
+      padding: {
+        container: {
+          xs: '34px',
+          md: '40px',
+          xl: '60px',
+        },
+      },
       backgroundImage: {
         'custom-footer-gradient':
           'linear-gradient(180deg, rgba(252, 234, 54, 0.21) 22.9%, rgba(75, 86, 237, 0.28) 100%)',

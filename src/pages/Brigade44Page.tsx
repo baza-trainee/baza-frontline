@@ -3,6 +3,7 @@ import InvinciSection from '@/components/brigades/Invincibility';
 import PowerSection from '@/components/brigades/PowerSection';
 import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
+import Container from '@/components/common/Container';
 import SEO from '@/components/common/SEO';
 
 const Brigade44Page = () => {
@@ -31,13 +32,15 @@ const Brigade44Page = () => {
         modifiedTime={currentDate}
         noindex={false}
       />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
-        <ImageSection />
-        <InvinciSection />
-        <PowerSection />
-        <ReportingSection />
-        <ShareSection title='Підтримай 44-ту окрему бригаду' />
-      </div>
+      <main className='flex min-h-screen flex-col items-center justify-center'>
+        <Container>
+          <ImageSection />
+          <InvinciSection />
+          <PowerSection />
+          <ReportingSection />
+          <ShareSection title='Підтримай 44-ту окрему бригаду' />
+        </Container>
+      </main>
     </>
   );
 };

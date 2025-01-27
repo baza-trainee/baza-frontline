@@ -57,7 +57,7 @@ const Hero = () => {
   const images = ['/hero/hero1.webp', '/hero/hero2.webp', '/hero/hero3.webp', '/hero/hero4.webp'];
 
   return (
-    <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[40px]'>
+    <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[80px]'>
       <h1 className='sr-only'>Baza Frontline - Підтримка українських військових</h1>
       <div className={styles.sliderContainer}>
         <Slider {...settings}>
