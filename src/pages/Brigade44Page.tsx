@@ -33,11 +33,15 @@ const Brigade44Page = () => {
         noindex={false}
       />
       <main className='flex min-h-screen flex-col items-center justify-center'>
+        <ImageSection />
         <Container>
-          <ImageSection />
-          <InvinciSection />
           <PowerSection />
-          <ReportingSection />
+        </Container>
+        <Container>
+          <InvinciSection />
+        </Container>
+        <ReportingSection />
+        <Container>
           <ShareSection title='Підтримай 44-ту окрему бригаду' />
         </Container>
       </main>
