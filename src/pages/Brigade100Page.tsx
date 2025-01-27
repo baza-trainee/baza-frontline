@@ -1,5 +1,6 @@
 import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
+import Container from '@/components/common/Container';
 import SEO from '@/components/common/SEO';
 
 const Brigade100Page = () => {
@@ -28,11 +29,12 @@ const Brigade100Page = () => {
         modifiedTime={currentDate}
         noindex={false}
       />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
-        {/* <DonationForm bankType='privatbank' /> */}
-        <ReportingSection />
-        <ShareSection title='Підтримай 100-ту окрему бригаду' />
-      </div>
+      <main className='flex min-h-screen flex-col'>
+        <Container>
+          <ReportingSection />
+          <ShareSection title='Підтримай 100-ту окрему бригаду' />
+        </Container>
+      </main>
     </>
   );
 };
