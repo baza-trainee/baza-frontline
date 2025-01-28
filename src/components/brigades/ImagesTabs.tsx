@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import BrigadePageTitle from '../common/BrigadePageTitle';
 
-const ImageGrid: React.FC = () => {
-  const images = [
-    { src: '/brigade-44/brigade-img_1.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_2.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_3.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_4.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_5.jpg', alt: 'brigade-44-img' },
-  ];
+// Інтерфейс для пропсів
+interface ImagesTabsProps {
+  images: { src: string; alt: string }[];
+}
 
+const ImagesTabs: React.FC<ImagesTabsProps> = ({ images }) => {
   // Встановлюємо початкове зображення як перше з масиву
   const [expandedImg, setExpandedImg] = useState<string>(images[0].src);
   const [imgText, setImgText] = useState<string>(images[0].alt);
@@ -20,11 +16,8 @@ const ImageGrid: React.FC = () => {
   };
 
   return (
-    <section className='flex flex-col items-center px-4 py-[34px] xs:px-4 md:px-10 md:py-10 xl:px-20 xl:py-[20px]'>
-      <BrigadePageTitle title=' 44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
-      {/* Expanded Image Container */}
+    <div className='flex flex-col items-center'>
       <div className='relative mt-8 w-full'>
-        {/* Expanded Image */}
         <img
           src={expandedImg}
           alt={imgText || 'Expanded Image'}
@@ -43,8 +36,8 @@ const ImageGrid: React.FC = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ImageGrid;
+export default ImagesTabs;
