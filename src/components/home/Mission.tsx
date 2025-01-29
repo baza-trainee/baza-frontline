@@ -6,7 +6,7 @@ const Mission = () => {
       <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold sm:mb-0 sm:text-3xl md:text-[40px] lg:text-[40px]'>
         Наша місія
       </h2>
-      <p className='mb-3 hidden w-full text-center text-sm md:block md:text-lg'>
+      <p className='mx-auto mb-3 hidden w-[694px] text-center text-sm font-[500] md:block md:text-lg'>
         Разом ми можемо більше! Ваші донати – це реальна допомога тим, хто стоїть на захисті нашої
         країни. Кожна гривня – це вклад у спільну перемогу!
       </p>
@@ -18,7 +18,7 @@ const Mission = () => {
           </div>
         ))}
       </div>
-      <p className='mt-3 text-sm sm:mt-0 sm:text-base md:hidden md:w-[55%]'>
+      <p className='mt-3 text-sm font-[500] sm:mt-0 sm:text-base md:hidden md:w-[55%]'>
         Разом ми можемо більше! Ваші донати – це реальна допомога тим, хто стоїть на захисті нашої
         країни. Кожна гривня – це вклад у спільну перемогу!
       </p>

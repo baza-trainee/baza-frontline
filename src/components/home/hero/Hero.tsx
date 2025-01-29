@@ -75,7 +75,7 @@ const Hero = () => {
       </div>
       <div className='flex w-full flex-col items-center justify-center gap-2 sm:flex-row sm:gap-6 md:w-fit'>
         <LinkButton text='Підтримати 100 ОМБР' href='/100-ОМБр' className='md:max-w-[288px]' />
-        <LinkButton text='Підтримати 44 ОАБР' href='/44-ОАБр' className='md:max-w-[288px]' />
+        <LinkButton text='Підтримати 44 ОМБР' href='/44-ОМБр' className='md:max-w-[288px]' />
       </div>
     </section>
   );
