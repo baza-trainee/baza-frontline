@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils';
 const images = [
   '/reporting/reporting1.png',
   '/reporting/reporting2.png',
-  '/reporting/reporting2.png',
+  '/reporting/reporting3.png',
 ];
 
 const ReportingSection = () => {
   return (
-    <section className='w-full'>
+    <section className='w-full py-[40px]'>
       <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-10'>
         Звітність
       </h2>
