@@ -66,7 +66,7 @@ const Hero = () => {
               <img
                 src={image}
                 alt='Наші Герої'
-                className='h-[180px] w-full rounded-xl object-cover xs2:h-[250px] md:h-[418px] lg:h-[514px] xl:h-[492px]'
+                className='h-[180px] w-full rounded-xl object-cover object-top xs2:h-[250px] md:h-[418px] lg:h-[514px] xl:h-[492px]'
                 draggable={false}
               />
             </div>

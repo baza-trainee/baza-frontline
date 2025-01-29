@@ -90,3 +90,6 @@ const ShareSection = ({ title }: { title: string }) => {
 };
 
 export default ShareSection;
+
+// https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=https%3A%2F%2Fvuejsnation.com
+// https://www.facebook.com/share_channel/?type=reshare&link=https%3A%2F%2Fvuejsnation.com&app_id=966242223397117&source_surface=external_reshare&display&hashtag#
