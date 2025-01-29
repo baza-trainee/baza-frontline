@@ -1,7 +1,7 @@
 import Button from '../ui/Button';
 
 const links = {
-  monobank: 'https://next.privat24.ua/send/2tmgj',
+  monobank: 'https://send.monobank.ua/jar/AHkZPMTCF',
   private: 'https://next.privat24.ua/send/2tmgj',
 };
 
