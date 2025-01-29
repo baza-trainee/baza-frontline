@@ -4,7 +4,7 @@
 }
 
 .ripple::before {
-  content: "";
+  content: '';
   position: absolute;
   left: var(--x);
   top: var(--y);
@@ -13,7 +13,9 @@
   height: 0;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  transition: width 0.5s, height 0.5s;
+  transition:
+    width 0.5s,
+    height 0.5s;
 }
 
 .ripple:hover::before {
