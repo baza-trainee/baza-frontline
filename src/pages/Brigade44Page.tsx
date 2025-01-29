@@ -1,13 +1,23 @@
+import React from 'react';
 import ImageSection from '@/components/brigades/ImagesTabs';
 import InvinciSection from '@/components/brigades/Invincibility';
 import PowerSection from '@/components/brigades/PowerSection';
 import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
-import Container from '@/components/common/Container';
+import BrigadePageTitle from '@/components/common/BrigadePageTitle';
+import { powerSectionData44 } from '@/components/common/Brigady';
 import SEO from '@/components/common/SEO';
 
-const Brigade44Page = () => {
+const Brigade44Page: React.FC = () => {
   const currentDate = new Date().toISOString();
+
+  const images = [
+    { src: '/brigade-44/brigade-img_1.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_2.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_3.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_4.jpg', alt: 'brigade-44-img' },
+    { src: '/brigade-44/brigade-img_5.jpg', alt: 'brigade-44-img' },
+  ];
 
   return (
     <>
@@ -32,19 +42,14 @@ const Brigade44Page = () => {
         modifiedTime={currentDate}
         noindex={false}
       />
-      <main className='flex min-h-screen flex-col items-center justify-center'>
-        <ImageSection />
-        <Container>
-          <PowerSection />
-        </Container>
-        <Container>
-          <InvinciSection />
-        </Container>
+      <div className='flex min-h-screen flex-col items-center justify-center'>
+        <BrigadePageTitle title='44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
+        <ImageSection images={images} />
+        <InvinciSection />
+        <PowerSection {...powerSectionData44} />
         <ReportingSection />
-        <Container>
-          <ShareSection title='Підтримай 44-ту окрему бригаду' />
-        </Container>
-      </main>
+        <ShareSection title='Підтримай 44-ту окрему бригаду' />
+      </div>
     </>
   );
 };
