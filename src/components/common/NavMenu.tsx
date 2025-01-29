@@ -36,12 +36,20 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
     setSelect(showSelect);
   };
 
+  const handleLinkClick = () => {
+    setShowSelect(false);
+    setSelect(false);
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <ul className={cn('relative z-50 w-full text-[16px] font-[500]', className)}>
+    <ul className={cn('relative z-50 text-[16px] font-[500]', className)}>
       <li>
         <ScrollToTopLink
           to='/'
-          onClick={onClose}
+          onClick={handleLinkClick}
           aria-label='Перейти до головної сторінки'
           className={cn(
             'border-b p-2 transition-colors duration-300',
@@ -75,7 +83,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
               <img src='/header/100ombr.png' alt='100 ОМБР logo' className='h-[14px] w-[12px]' />
               <ScrollToTopLink
                 to='/100-ОМБр'
-                onClick={onClose}
+                onClick={handleLinkClick}
                 className={cn(pathname === '/100ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
                 100 ОМБР
@@ -84,8 +92,8 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
             <li className='flex items-center gap-2'>
               <img src='/header/44ombr.png' alt='44 ОМБР logo' className='h-[14px] w-[12px]' />
               <ScrollToTopLink
-                to='/44-ОАБр'
-                onClick={onClose}
+                to='/44-ОМБр'
+                onClick={handleLinkClick}
                 className={cn(pathname === '/44ombr' ? 'text-blue-500' : 'hover:text-blue-500')}
               >
                 44 ОМБР
@@ -97,7 +105,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
       <li>
         <ScrollToTopLink
           to='/contacts'
-          onClick={onClose}
+          onClick={handleLinkClick}
           aria-label='Перейти до сторінки Контакти'
           className={cn(
             'border-b p-[0.6rem] transition-colors duration-300',
