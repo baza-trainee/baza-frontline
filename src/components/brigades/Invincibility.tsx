@@ -3,7 +3,7 @@
 const Invincibility = () => {
   return (
     <>
-      <section className='w-full bg-[#F4F6FD] px-4 py-[60px]'>
+      <section className='w-full bg-[#F4F6FD] py-[60px]'>
         <div className='container'>
           <h2 className='mb-5 text-center font-playfairDisplay text-[24px] font-bold leading-[150%] xs2:text-[32px] md:mb-7 lg:mb-9 lg:hidden xl:mb-10 xl:text-[40px]'>
             Символ незламності - гільза за донат

@@ -17,7 +17,7 @@ const PowerSection: React.FC<PowerSectionProps> = ({
 }) => {
   return (
     <section className='w-full bg-[#FCFCFC]'>
-      <div className='m-auto max-w-[1280px] px-4 py-[60px]'>
+      <div className='m-auto max-w-[1280px] p-2 py-[60px]'>
         <h2 className='mb-5 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-10'>
           {title}
         </h2>

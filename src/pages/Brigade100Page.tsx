@@ -1,23 +1,17 @@
 import React from 'react';
+import DonationSection from '@/components/brigades/DonationSection';
 import ImageSection from '@/components/brigades/ImagesTabs';
 import PowerSection from '@/components/brigades/PowerSection';
 import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
 import BrigadePageTitle from '@/components/common/BrigadePageTitle';
-import { powerSectionData100 } from '@/components/common/Brigady';
 import Container from '@/components/common/Container';
 import SEO from '@/components/common/SEO';
+import { images100 } from '@/constants/images';
+import { powerSectionData100 } from '@/constants/powerSection';
 
 const Brigade100Page: React.FC = () => {
   const currentDate = new Date().toISOString();
-
-  const images = [
-    { src: '/brigade-100/brigade-img_1.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-100/brigade-img_2.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-100/brigade-img_3.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-100/brigade-img_4.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-100/brigade-img_5.jpg', alt: 'brigade-44-img' },
-  ];
 
   return (
     <>
@@ -43,10 +37,11 @@ const Brigade100Page: React.FC = () => {
         noindex={false}
       />
       <main className='flex min-h-screen flex-col'>
-        <BrigadePageTitle title='100 окрема механізована бригада' image='/logo/logo100.svg' />
-        <ImageSection images={images} />
-        <PowerSection {...powerSectionData100} />
         <Container>
+          <BrigadePageTitle title='100 окрема механізована бригада' image='/logo/logo100.svg' />
+          <ImageSection images={images100} />
+          <PowerSection {...powerSectionData100} />
+          <DonationSection bank='private' />
           <ReportingSection />
           <ShareSection title='Підтримай 100-ту окрему бригаду' />
         </Container>

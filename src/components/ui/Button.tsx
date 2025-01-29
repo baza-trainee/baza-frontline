@@ -28,7 +28,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           styles.ripple,
           className ? className : 'mx-auto',
-          'relative flex w-full items-center justify-center gap-4 whitespace-nowrap rounded-xl bg-black px-[16px] py-4 text-[18px] font-[500] text-white transition-colors duration-300 hover:bg-gray-800',
+          'relative flex w-full max-w-[272px] items-center justify-center gap-4 whitespace-nowrap rounded-xl bg-black px-[16px] py-4 text-[18px] font-[500] text-white transition-colors duration-300 hover:bg-gray-800',
         )}
         style={{ '--x': '50%', '--y': '50%' } as React.CSSProperties}
       >

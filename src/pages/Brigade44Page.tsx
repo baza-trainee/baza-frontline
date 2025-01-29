@@ -1,23 +1,18 @@
 import React from 'react';
+import DonationSection from '@/components/brigades/DonationSection';
 import ImageSection from '@/components/brigades/ImagesTabs';
 import InvinciSection from '@/components/brigades/Invincibility';
 import PowerSection from '@/components/brigades/PowerSection';
 import ReportingSection from '@/components/brigades/ReportingSection';
 import ShareSection from '@/components/brigades/ShareSection';
 import BrigadePageTitle from '@/components/common/BrigadePageTitle';
-import { powerSectionData44 } from '@/components/common/Brigady';
+import Container from '@/components/common/Container';
 import SEO from '@/components/common/SEO';
+import { images44 } from '@/constants/images';
+import { powerSectionData44 } from '@/constants/powerSection';
 
 const Brigade44Page: React.FC = () => {
   const currentDate = new Date().toISOString();
-
-  const images = [
-    { src: '/brigade-44/brigade-img_1.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_2.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_3.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_4.jpg', alt: 'brigade-44-img' },
-    { src: '/brigade-44/brigade-img_5.jpg', alt: 'brigade-44-img' },
-  ];
 
   return (
     <>
@@ -42,14 +37,17 @@ const Brigade44Page: React.FC = () => {
         modifiedTime={currentDate}
         noindex={false}
       />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
-        <BrigadePageTitle title='44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
-        <ImageSection images={images} />
-        <InvinciSection />
-        <PowerSection {...powerSectionData44} />
-        <ReportingSection />
-        <ShareSection title='Підтримай 44-ту окрему бригаду' />
-      </div>
+      <main className='flex min-h-screen flex-col items-center justify-center'>
+        <Container>
+          <BrigadePageTitle title='44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
+          <ImageSection images={images44} />
+          <PowerSection {...powerSectionData44} />
+          <InvinciSection />
+          <DonationSection bank='monobank' />
+          <ReportingSection />
+          <ShareSection title='Підтримай 44-ту окрему бригаду' />
+        </Container>
+      </main>
     </>
   );
 };
