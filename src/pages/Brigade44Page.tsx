@@ -17,12 +17,12 @@ const Brigade44Page: React.FC = () => {
   return (
     <>
       <SEO
-        title='44 ОАБр - Підтримка бригади | Baza Frontline'
-        description='Підтримайте 44-ту окрему артилерійську бригаду ЗСУ. Ваша допомога наближає перемогу України!'
+        title='44 ОМБр - Підтримка бригади | Baza Frontline'
+        description='Підтримайте 44-ту окрему механізовану бригаду ЗСУ. Ваша допомога наближає перемогу України!'
         url='/44'
         type='website'
         keywords={[
-          '44 ОАБр',
+          '44 ОмБр',
           '44 бригада',
           'підтримка військових',
           'допомога армії',
@@ -39,7 +39,7 @@ const Brigade44Page: React.FC = () => {
       />
       <main className='flex min-h-screen flex-col items-center justify-center'>
         <Container>
-          <BrigadePageTitle title='44 Окрема Механізована Бригада' image='/logo/logo44.svg' />
+          <BrigadePageTitle title='44 окрема механізована бригада' image='/logo/logo44.svg' />
           <ImageSection images={images44} />
           <PowerSection {...powerSectionData44} />
           <InvinciSection />
