@@ -36,9 +36,17 @@ body.lock {
 }
 
 .summary-icon {
-  transition: transform 0.3s ease; /* Smooth rotation */
+  transition: transform 0.3s ease;
 }
 
 details[open] .summary-icon {
-  transform: rotate(45deg); /* Rotate by 30 degrees when open */
+  transform: rotate(45deg);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+details[open] .arrow-icon {
+  transform: rotate(90deg);
 }

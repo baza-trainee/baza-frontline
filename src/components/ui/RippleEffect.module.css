@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(33, 107, 226);
   border-radius: 50%;
   transition:
     width 0.5s,
@@ -19,6 +19,6 @@
 }
 
 .ripple:hover::before {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
