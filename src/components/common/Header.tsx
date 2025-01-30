@@ -34,7 +34,7 @@ const Header = () => {
         </button>
         <NavMenu
           className='hidden flex-1 items-center justify-center gap-10 lg:absolute lg:left-1/3 lg:flex lg:-translate-x-1/2 xl:left-1/2'
-          dropDownClassName='absolute left-0 top-[30px] w-full bg-gray-200 rounded-lg p-4 shadow-lg'
+          dropDownClassName='absolute left-0 top-[50px] w-full bg-gray-200 rounded-lg p-4 shadow-lg'
         />
         <Motto className='hidden w-[288px] lg:block' />
         {showMobileMenu && <MobileMenu onClose={closeMobileMenu} />}

@@ -1,3 +1,4 @@
+import { BiSolidRightArrow } from 'react-icons/bi';
 import { questions } from '@/constants';
 import PlusImg from '/icons/plus.svg';
 
@@ -27,7 +28,8 @@ const Questions = () => {
               role='button'
               aria-expanded='false'
             >
-              <span className='pr-4 text-[14px] font-[500] sm:text-[16px] md:text-[18px]'>
+              <span className='flex items-center gap-4 pr-4 text-[14px] font-[500] sm:text-[16px] md:text-[18px]'>
+                <BiSolidRightArrow className='arrow-icon text-sm' />
                 {item.question}
               </span>
               <span
