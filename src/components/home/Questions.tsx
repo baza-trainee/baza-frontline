@@ -1,4 +1,3 @@
-import { BiSolidRightArrow } from 'react-icons/bi';
 import { questions } from '@/constants';
 import PlusImg from '/icons/plus.svg';
 
@@ -24,12 +23,11 @@ const Questions = () => {
         {questions.map((item) => (
           <details key={item.id} className='group w-full'>
             <summary
-              className='mx-auto mb-2 flex w-[80%] cursor-pointer items-center justify-between border-b-[1px] border-b-[gray] p-4 text-[14px] group-open:bg-[#E4EDFE] sm:text-[16px] md:text-[18px]'
+              className='mx-auto mb-2 flex w-[80%] cursor-pointer items-center justify-between border-b-[1px] border-b-[gray] p-4 text-[14px] group-open:bg-[#E4EDFE] sm:text-[16px] md:text-[18px] [&::-webkit-details-marker]:hidden'
               role='button'
               aria-expanded='false'
             >
               <span className='flex items-center gap-4 pr-4 text-[14px] font-[500] sm:text-[16px] md:text-[18px]'>
-                <BiSolidRightArrow className='arrow-icon text-sm' />
                 {item.question}
               </span>
               <span
