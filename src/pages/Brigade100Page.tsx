@@ -38,7 +38,7 @@ const Brigade100Page: React.FC = () => {
       />
       <main className='flex min-h-screen flex-col'>
         <Container>
-          <BrigadePageTitle title='100 Окрема механізована бригада' image='/logo/logo100.svg' />
+          <BrigadePageTitle title='100 окрема механізована бригада' image='/logo/logo100.svg' />
           <ImageSection images={images100} />
           <PowerSection {...powerSectionData100} />
           <DonationSection bank='private' />

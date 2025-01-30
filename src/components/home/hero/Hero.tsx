@@ -54,7 +54,12 @@ const Hero = () => {
     touchThreshold: 30,
   };
 
-  const images = ['/hero/hero1.webp', '/hero/hero2.webp', '/hero/hero3.webp', '/hero/hero4.webp'];
+  const images = [
+    '/brigade-44/brigade-img_1.png',
+    '/hero/hero2.webp',
+    '/hero/hero3.webp',
+    '/hero/hero4.webp',
+  ];
 
   return (
     <section className='flex flex-col items-center justify-center gap-8 px-2 py-[20px] md:px-4 lg:px-[20px] xl:px-[80px]'>
