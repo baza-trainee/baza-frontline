@@ -7,7 +7,7 @@ export const images100 = [
 ];
 
 export const images44 = [
-  { src: '/brigade-44/brigade-img_1.png', alt: 'brigade-44-img' },
+  { src: '/brigade-44/brigade-img_1.webp', alt: 'brigade-44-img' },
   { src: '/brigade-44/brigade-img_2.webp', alt: 'brigade-44-img' },
   { src: '/brigade-44/brigade-img_3.webp', alt: 'brigade-44-img' },
   { src: '/brigade-44/brigade-img_4.webp', alt: 'brigade-44-img' },

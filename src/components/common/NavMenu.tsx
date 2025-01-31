@@ -104,7 +104,7 @@ const NavMenu = ({ onClose, className, dropDownClassName }: NavMenuProps) => {
       </li>
       <li>
         <ScrollToTopLink
-          to='/contacts'
+          to='/контакти'
           onClick={handleLinkClick}
           aria-label='Перейти до сторінки Контакти'
           className={cn(

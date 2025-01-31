@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 import styles from './ReportingSection.module.css';
 
 const images = [
-  '/reporting/reporting1.png',
-  '/reporting/reporting2.png',
-  '/reporting/reporting3.png',
+  { src: '/reporting/reporting1.png', alt: 'Financial Report - Q1' },
+  { src: '/reporting/reporting2.png', alt: 'Annual Budget Breakdown' },
+  { src: '/reporting/reporting3.png', alt: 'Expense Summary for 2023' },
 ];
 
 const NextArrow = (props: CustomArrowProps) => {
@@ -23,6 +23,7 @@ const NextArrow = (props: CustomArrowProps) => {
       }}
       className={`${styles.arrow} ${styles.nextArrow}`}
       aria-label='Next slide'
+      tabIndex={0}
     >
       <FaChevronRight />
     </button>
@@ -40,6 +41,7 @@ const PrevArrow = (props: CustomArrowProps) => {
       }}
       className={`${styles.arrow} ${styles.prevArrow}`}
       aria-label='Previous slide'
+      tabIndex={0}
     >
       <FaChevronLeft />
     </button>
@@ -73,17 +75,24 @@ const ReportingSection = () => {
 
   return (
     <section className='w-full py-[40px]'>
-      <h2 className='mb-6 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-[6rem]'>
+      <h2
+        id='reporting-title'
+        className='mb-6 text-center font-playfairDisplay text-2xl font-bold md:mb-7 md:text-[40px] lg:mb-9 xl:mb-[6rem]'
+      >
         Звітність
       </h2>
       <div className='flex justify-center gap-6'>
-        <div className={styles.sliderContainer}>
+        <div
+          className={styles.sliderContainer}
+          aria-labelledby='reporting-title'
+          aria-live='polite'
+        >
           <Slider {...settings}>
             {images.map((image, index) => (
               <img
                 key={index}
-                src={image}
-                alt={`Image ${index}`}
+                src={image.src}
+                alt={image.alt}
                 className={cn(
                   'h-[136px] w-[136px] rounded-md object-cover xs2:h-[200px] xs2:w-[200px] md:h-[300px] md:w-[300px] xl:h-[357px] xl:w-[357px]',
                 )}

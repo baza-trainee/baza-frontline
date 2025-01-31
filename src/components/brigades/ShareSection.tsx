@@ -6,26 +6,18 @@ import AlertModal from '../common/AlertModal';
 interface ShareButtonProps {
   icon: string;
   onClick?: () => void;
-  as?: 'button' | 'div';
+  label: string;
 }
 
-const ShareButton = ({ icon, onClick, as = 'button' }: ShareButtonProps) => {
-  const className =
-    'flex h-[56px] w-[288px] items-center justify-center gap-4 rounded-lg border-2 border-blue-500 px-[24px] py-2 font-[500] transition-colors hover:bg-blue-100';
-
-  if (as === 'div') {
-    return (
-      <div className={className} onClick={onClick}>
-        <img src={icon} alt='Поділитися' className='h-[24px] w-[24px] object-contain' />
-        Поділитися
-      </div>
-    );
-  }
-
+const ShareButton = ({ icon, onClick, label }: ShareButtonProps) => {
   return (
-    <button onClick={onClick} className={className}>
-      <img src={icon} alt='Поділитися' className='h-[24px] w-[24px] object-contain' />
-      Поділитися
+    <button
+      onClick={onClick}
+      className='flex h-[56px] w-[288px] items-center justify-center gap-4 rounded-lg border-2 border-blue-500 px-[24px] py-2 font-[500] transition-colors hover:bg-blue-100'
+      aria-label={label}
+    >
+      <img src={icon} alt='' className='h-[24px] w-[24px] object-contain' />
+      {label}
     </button>
   );
 };
@@ -37,44 +29,36 @@ const ShareSection = ({ title }: { title: string }) => {
   useDisableScroll(isModalOpen);
 
   const handleInstagramShare = () => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      const instagramUrl = `instagram://story-camera`;
-      window.location.href = instagramUrl;
-
-      setTimeout(() => {
-        window.location.href = 'instagram://';
-      }, 500);
-
-      setTimeout(() => {
-        window.location.href = 'https://www.instagram.com/';
-      }, 1000);
-    } else {
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
+    window.open('https://www.instagram.com/', '_blank', 'noopener noreferrer');
   };
 
   return (
     <>
       <section className='flex flex-col items-center justify-center gap-4 px-4 py-[34px] xl:flex-row'>
         <div className='flex flex-col gap-4 md:flex-row'>
-          <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target='_blank'>
-            <ShareButton icon='/icons/social/facebook.svg' as='div' />
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ShareButton icon='/icons/social/facebook.svg' label='Share on Facebook' />
           </a>
 
-          <div onClick={handleInstagramShare}>
-            <ShareButton icon='/icons/social/instagram.svg' as='div' />
-          </div>
+          <ShareButton
+            icon='/icons/social/instagram.svg'
+            label='Share on Instagram'
+            onClick={handleInstagramShare}
+          />
         </div>
 
         <div className='flex flex-col gap-4 md:flex-row'>
           <LinkedinShareButton url={shareUrl} title={title}>
-            <ShareButton icon='/icons/social/linkedin.svg' as='div' />
+            <ShareButton icon='/icons/social/linkedin.svg' label='Share on LinkedIn' />
           </LinkedinShareButton>
 
           <TelegramShareButton url={shareUrl} title={title}>
-            <ShareButton icon='/icons/social/telegram.svg' as='div' />
+            <ShareButton icon='/icons/social/telegram.svg' label='Share on Telegram' />
           </TelegramShareButton>
         </div>
       </section>
@@ -82,8 +66,8 @@ const ShareSection = ({ title }: { title: string }) => {
       <AlertModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        title='Поділитися в Instagram'
-        message={`Щоб поділитися в Instagram:\n1. Відкрийте Instagram\n2. Створіть нову історію\n3. Додайте посилання на сторінку:\n${shareUrl}`}
+        title='Share on Instagram'
+        message={`To share on Instagram:\n1. Open Instagram\n2. Create a new Story\n3. Add a link to the page:\n${shareUrl}`}
       />
     </>
   );
