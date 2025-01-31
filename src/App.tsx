@@ -26,10 +26,10 @@ function App() {
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/contacts' element={<ContactsPage />} />
+          <Route path='/контакти' element={<ContactsPage />} />
           <Route path='/44-ОМБр' element={<Brigade44Page />} />
           <Route path='/100-ОМБр' element={<Brigade100Page />} />
-          <Route path='/documents/:fileName' element={<PdfView />} />
+          <Route path='/документи/:fileName' element={<PdfView />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
