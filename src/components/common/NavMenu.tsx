@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { IoChevronUp, IoChevronDown } from 'react-icons/io5';
 import { useLocation } from 'react-router';
+import { useSelect } from '@/hooks/selectStore';
 import { cn } from '@/lib/utils';
-import { useSelect } from '@/stores/selectStore';
 import ScrollToTopLink from './ScrollToTopLink';
 
 interface NavMenuProps {
