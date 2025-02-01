@@ -42,7 +42,7 @@ const DonationSection = ({ bank }: { bank: 'monobank' | 'private' }) => {
         </div>
       </div>
       <Button
-        text='Допомогти'
+        text='Підтримати'
         onClick={handleClick}
         aria-label={`Перейти до донату через ${bank === 'monobank' ? 'Monobank' : 'PrivatBank'}`}
         aria-describedby='new-window-description'
