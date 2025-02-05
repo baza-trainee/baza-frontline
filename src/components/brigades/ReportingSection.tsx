@@ -6,12 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import { cn } from '@/lib/utils';
 import styles from './ReportingSection.module.css';
 
-const images = [
-  { src: '/reporting/reporting1.png', alt: 'Financial Report - Q1' },
-  { src: '/reporting/reporting2.png', alt: 'Annual Budget Breakdown' },
-  { src: '/reporting/reporting3.png', alt: 'Expense Summary for 2023' },
-];
-
 const NextArrow = (props: CustomArrowProps) => {
   const { onClick } = props;
   return (
@@ -48,7 +42,11 @@ const PrevArrow = (props: CustomArrowProps) => {
   );
 };
 
-const ReportingSection = () => {
+interface ReportingSectionProps {
+  images: { src: string; alt: string }[];
+}
+
+const ReportingSection = ({ images }: ReportingSectionProps) => {
   const settings = {
     dots: false,
     infinite: true,
