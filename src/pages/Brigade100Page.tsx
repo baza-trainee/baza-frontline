@@ -10,6 +10,13 @@ import SEO from '@/components/common/SEO';
 import { images100 } from '@/constants/images';
 import { powerSectionData100 } from '@/constants/powerSection';
 
+const images = [
+  { src: '/reporting/reporting100_1.webp', alt: 'Фото 100 ОМБр' },
+  { src: '/reporting/reporting100_2.webp', alt: 'Фото 100 ОМБр' },
+  { src: '/reporting/reporting100_3.webp', alt: 'Фото 100 ОМБр' },
+  { src: '/reporting/reporting100_4.webp', alt: 'Фото 100 ОМБр' },
+];
+
 const Brigade100Page: React.FC = () => {
   const currentDate = new Date().toISOString();
 
@@ -42,7 +49,7 @@ const Brigade100Page: React.FC = () => {
           <ImageSection images={images100} />
           <PowerSection {...powerSectionData100} />
           <DonationSection bank='private' />
-          <ReportingSection />
+          <ReportingSection images={images} />
           <ShareSection title='Підтримай 100-ту окрему бригаду' />
         </Container>
       </main>

@@ -11,6 +11,12 @@ import SEO from '@/components/common/SEO';
 import { images44 } from '@/constants/images';
 import { powerSectionData44 } from '@/constants/powerSection';
 
+const images = [
+  { src: '/reporting/reporting44_1.webp', alt: 'Фото 44 ОМБр' },
+  { src: '/reporting/reporting44_2.webp', alt: 'Фото 44 ОМБр' },
+  { src: '/reporting/reporting44_3.webp', alt: 'Фото 44 ОМБр' },
+];
+
 const Brigade44Page: React.FC = () => {
   const currentDate = new Date().toISOString();
 
@@ -44,7 +50,7 @@ const Brigade44Page: React.FC = () => {
           <PowerSection {...powerSectionData44} />
           <InvinciSection />
           <DonationSection bank='monobank' />
-          <ReportingSection />
+          <ReportingSection images={images} />
           <ShareSection title='Підтримай 44-ту окрему бригаду' />
         </Container>
       </main>

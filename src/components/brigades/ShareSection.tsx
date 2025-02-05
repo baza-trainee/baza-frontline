@@ -42,23 +42,23 @@ const ShareSection = ({ title }: { title: string }) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <ShareButton icon='/icons/social/facebook.svg' label='Share on Facebook' />
+            <ShareButton icon='/icons/social/facebook.svg' label='Поділитися на Facebook' />
           </a>
 
           <ShareButton
             icon='/icons/social/instagram.svg'
-            label='Share on Instagram'
+            label='Поділитися на Instagram'
             onClick={handleInstagramShare}
           />
         </div>
 
         <div className='flex flex-col gap-4 md:flex-row'>
           <LinkedinShareButton url={shareUrl} title={title}>
-            <ShareButton icon='/icons/social/linkedin.svg' label='Share on LinkedIn' />
+            <ShareButton icon='/icons/social/linkedin.svg' label='Поділитися на LinkedIn' />
           </LinkedinShareButton>
 
           <TelegramShareButton url={shareUrl} title={title}>
-            <ShareButton icon='/icons/social/telegram.svg' label='Share on Telegram' />
+            <ShareButton icon='/icons/social/telegram.svg' label='Поділитися на Telegram' />
           </TelegramShareButton>
         </div>
       </section>
