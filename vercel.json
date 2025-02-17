@@ -2,12 +2,12 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/документи/:path*",
-      "destination": "/документи/:path*"
+      "source": "/документи/:fileName",
+      "destination": "/index.html"
     },
     {
-      "source": "/:path((?!.*\\.).*)",
-      "destination": "/"
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ],
   "cleanUrls": true
