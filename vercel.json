@@ -2,6 +2,14 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/документи/:fileName",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/документи/:fileName*",
+      "destination": "/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
