@@ -29,7 +29,8 @@ function App() {
           <Route path='/контакти' element={<ContactsPage />} />
           <Route path='/44-ОМБр' element={<Brigade44Page />} />
           <Route path='/100-ОМБр' element={<Brigade100Page />} />
-          <Route path='/documents/:fileName' element={<PdfView />} />
+          <Route path='/політика-конфіденційності' element={<PdfView />} />
+          <Route path='/правила-користування-сайтом' element={<PdfView />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
