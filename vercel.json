@@ -1,17 +1,14 @@
 {
   "trailingSlash": false,
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/документи/:filename(.+\\.pdf)",
-      "destination": "/документи/:filename"
+      "source": "/docs/:path*",
+      "destination": "/docs/:path*"
     },
     {
-      "source": "/документи/:path*",
-      "destination": "/"
-    },
-    {
-      "source": "/:path((?!.*\\.).*)",
-      "destination": "/"
+      "source": "/((?!docs/).*)",
+      "destination": "/index.html"
     }
   ]
 }
