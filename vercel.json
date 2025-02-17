@@ -1,8 +1,13 @@
 {
   "trailingSlash": false,
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/docs/:path*",
+      "destination": "/docs/:path*"
+    },
+    {
+      "source": "/((?!docs/).*)",
       "destination": "/index.html"
     }
   ],
