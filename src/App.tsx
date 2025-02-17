@@ -29,7 +29,7 @@ function App() {
           <Route path='/контакти' element={<ContactsPage />} />
           <Route path='/44-ОМБр' element={<Brigade44Page />} />
           <Route path='/100-ОМБр' element={<Brigade100Page />} />
-          <Route path='/документи/:fileName' element={<PdfView />} />
+          <Route path='/documents/:fileName' element={<PdfView />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
