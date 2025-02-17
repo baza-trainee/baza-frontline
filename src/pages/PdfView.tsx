@@ -1,13 +1,20 @@
 import { useCallback, useRef, useState, useEffect } from 'react';
 import * as PDFJS from 'pdfjs-dist';
 import type { PDFDocumentProxy, RenderParameters } from 'pdfjs-dist/types/src/display/api';
+import policy from '@/assets/docs/політика-конфіденційності.pdf';
+import rules from '@/assets/docs/правила-користування-сайтом.pdf';
 import SEO from '@/components/common/SEO';
 
 const PdfView = () => {
   const { pathname } = window.location;
-  const routeName = pathname.slice(1); // remove leading slash
+  const routeName = decodeURIComponent(pathname.slice(1)); // decode URI to handle special characters
 
-  const src = `/docs/${routeName}.pdf`;
+  const src =
+    routeName === 'правила-користування-сайтом'
+      ? rules
+      : routeName === 'політика-конфіденційності'
+        ? policy
+        : policy;
 
   PDFJS.GlobalWorkerOptions.workerSrc =
     'https://unpkg.com/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
