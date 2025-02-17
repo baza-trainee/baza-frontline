@@ -55,7 +55,7 @@ const FooterContent = ({ variant }: FooterContentProps) => {
         )}
       >
         <ScrollToTopLink
-          to={`/документи/${encodeURIComponent('Політика конфіденційності.pdf')}`}
+          to={`/політика-конфіденційності`}
           aria-label='Політика конфіденційності'
           className='hover:underline'
           target='_blank'
@@ -70,7 +70,7 @@ const FooterContent = ({ variant }: FooterContentProps) => {
         )}
       >
         <ScrollToTopLink
-          to={`/документи/${encodeURIComponent('Правила користування сайтом.pdf')}`}
+          to={`/правила-користування-сайтом`}
           aria-label='Правила користування сайтом'
           className='hover:underline'
           target='_blank'

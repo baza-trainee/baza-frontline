@@ -1,12 +1,13 @@
 import { useCallback, useRef, useState, useEffect } from 'react';
 import * as PDFJS from 'pdfjs-dist';
 import type { PDFDocumentProxy, RenderParameters } from 'pdfjs-dist/types/src/display/api';
-import { useParams } from 'react-router';
 import SEO from '@/components/common/SEO';
 
 const PdfView = () => {
-  const { fileName } = useParams();
-  const src = `/docs/${fileName}`;
+  const { pathname } = window.location;
+  const routeName = pathname.slice(1); // remove leading slash
+
+  const src = `/docs/${routeName}.pdf`;
 
   PDFJS.GlobalWorkerOptions.workerSrc =
     'https://unpkg.com/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
@@ -136,9 +137,9 @@ const PdfView = () => {
   return (
     <>
       <SEO
-        title={`Документ - ${fileName?.replace('.pdf', '')}`}
+        title={`Документ - ${routeName}`}
         description='Перегляд документа у форматі PDF'
-        url={`/documents/${fileName}`}
+        url={`/${routeName}`}
         type='article'
         modifiedTime={new Date().toISOString()}
         keywords={['документ', 'PDF документ', 'перегляд документа', 'Baza Frontline документи']}
