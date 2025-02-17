@@ -10,5 +10,6 @@
       "source": "/((?!docs/).*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
