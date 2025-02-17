@@ -2,16 +2,13 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/documents/:filename(.+\\.pdf)",
-      "destination": "/документи/:filename"
-    },
-    {
-      "source": "/documents/:path*",
-      "destination": "/"
+      "source": "/документи/:path*",
+      "destination": "/документи/:path*"
     },
     {
       "source": "/:path((?!.*\\.).*)",
       "destination": "/"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
